@@ -10,7 +10,7 @@ describe("tests for job CRUD operations", function () {
         const { email } = this.test_user;
         const password = testUserPassword;
 
-        const req = request.execute(app).post("/auth/logon").send({
+        const req = request.execute(app).post("/api/v1/logon").send({
         email,
         password,
         });
