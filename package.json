@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "test": "cross-env NODE_ENV=test mocha tests/*.js --timeout 5000 --exit"
   },
   "author": "",
   "license": "ISC",
@@ -21,11 +22,19 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^6.13.4",
     "rate-limiter": "^0.2.0",
+    "supertest": "^7.0.0",
     "swagger-ui-express": "^4.1.6",
     "xss-clean": "^0.1.1",
     "yamljs": "^0.3.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.9"
+    "@faker-js/faker": "^7.6.0",
+    "chai": "^5.2.0",
+    "chai-http": "^5.1.1",
+    "cross-env": "^7.0.3",
+    "factory-bot": "^6.3.1",
+    "mocha": "^11.1.0",
+    "nodemon": "^3.1.9",
+    "puppeteer": "^24.3.1"
   }
 }
